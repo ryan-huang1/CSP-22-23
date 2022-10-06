@@ -48,6 +48,16 @@ for step in range(3): # forward 3
   move()
 '''
 
+robot.setheading(0)
+
+for i in range(4):
+  move()
+
+turn_left()
+
+for i in range(4):
+  move()
+
 #---- end robot movement 
 
 wn.mainloop()
