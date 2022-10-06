@@ -49,18 +49,37 @@ for step in range(3): # forward 3
 '''
 
 robot.setheading(0)
-
-for i in range(3):
-  move()
-
-turn_left()
-
-for i in range(3):
-  move()
-
+for i in range(2):
+  for i in range(3):
+    move()
+  turn_left()
 robot.setheading(180)
-
 move()
+
+robot.goto(startx, starty)
+
+robot.setheading(90)
+for i in range(3):
+  move()
+
+robot.setheading(0)
+
+for i in range(2):
+  move()
+
+# robot.setheading(0)
+
+# for i in range(3):
+#   move()
+
+# turn_left()
+
+# for i in range(3):
+#   move()
+
+# robot.setheading(180)
+
+# move()
 
 #---- end robot movement 
 
