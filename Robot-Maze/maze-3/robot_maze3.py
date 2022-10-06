@@ -47,12 +47,33 @@ wn.bgpic("/Users/ryanhuang/Documents/GitHub/CSP-22-23/Robot-Maze/maze-3/maze3.pn
 for step in range(3): # forward 3
   move()
 '''
+cycle = 0 
+one = 0
+two = 0
+three = 0
+while cycle == 0:
+  while one == 0:
+    robot.setheading(0)
+    move()
+    robot.setheading(90)
+    for i in range(2):
+      move()
+    robot.setheading(0)
+    move()
+    one += 1
 
-robot.setheading(0)
-
-move()
-
-robot.setheading(0)
+  robot.color("blue")
+  robot.pencolor("blue")
+  
+  while two == 0:
+    robot.setheading(90)
+    move()
+    robot.setheading(0)
+    for i in range(2):
+      move()
+    robot.setheading(90)
+    move()
+    two += 1
 
 #---- end robot movement 
 
