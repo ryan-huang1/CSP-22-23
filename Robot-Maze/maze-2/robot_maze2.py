@@ -37,7 +37,7 @@ robot.speed(2)
 robot.showturtle()
 
 # #---- TODO: change maze here
-wn.bgpic("/Users/ryanhuang/Documents/GitHub/CSP-22-23/Robot-Maze/maze1.gif") # other file names should be maze2.png, maze3.png
+wn.bgpic("/Users/ryanhuang/Documents/GitHub/CSP-22-23/Robot-Maze/maze-2/maze2.png") # other file names should be maze2.png, maze3.png
 
 #---- TODO: begin robot movement here
 # move robot forward with move()
@@ -50,13 +50,17 @@ for step in range(3): # forward 3
 
 robot.setheading(0)
 
-for i in range(4):
+for i in range(3):
   move()
 
 turn_left()
 
-for i in range(4):
+for i in range(3):
   move()
+
+robot.setheading(180)
+
+move()
 
 #---- end robot movement 
 
