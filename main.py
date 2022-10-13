@@ -52,12 +52,5 @@ for step in range(50):
           horiz_turtles.remove(ht)
           vert_turtles.remove(vt)
 
-  # for vt in vert_turtles:
-  #   vt.forward(3)
-  #   if (abs(ht.xcor() - vt.xcor()) < 20):
-  #     vert_turtles.remove(vt)
-  #   if (abs(ht.ycor() - vt.ycor()) < 20):
-  #     horiz_turtles.remove(vt)
-
 wn = trtl.Screen()
 wn.mainloop()
