@@ -2,6 +2,8 @@
 #-----import statements-----
 import turtle as trtl
 
+#-----game configuration----
+
 spot_color = "pink"
 spot_size = 2
 spot_shape= "circle"
@@ -17,6 +19,8 @@ square_shape = "square"
 classic_color = "red"
 classic_size = 1
 classic_shape = "classic"
+
+#-----initialize turtle-----
 
 spot_painter = trtl.Turtle()
 spot_painter.shape("circle")
@@ -37,14 +41,6 @@ classic_painter = trtl.Turtle()
 classic_painter.shape("classic")
 classic_painter.shapesize(classic_size)
 classic_painter.fillcolor(classic_color)
-
-wn = trtl.Screen()
-
-#-----game configuration----
-
-
-#-----initialize turtle-----
-
 
 #-----game functions--------
 
