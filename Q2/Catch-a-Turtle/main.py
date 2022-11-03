@@ -6,23 +6,15 @@ import random as rand
 #-----game configuration----
 
 score = 0
+
 font_setup = ("Arial", 20, "normal")
+timer = 5
+counter_interval = 1000   #1000 represents 1 second
+timer_up = False
 
 spot_color = "pink"
 spot_size = 2
 spot_shape= "circle"
-
-# triangle_color = "blue"
-# triangle_size = 2
-# triangle_shape = "triangle"
-
-# square_color = "green"
-# square_size = 3
-# square_shape = "square"
-
-# classic_color = "red"
-# classic_size = 1
-# classic_shape = "classic"
 
 #-----initialize turtle-----
 
@@ -31,26 +23,14 @@ spot_painter.shape("circle")
 spot_painter.shapesize(spot_size)
 spot_painter.fillcolor(spot_color)
 
+counter =  trtl.Turtle()
+counter.penup()
+counter.goto(-350, 300)
+
 score_writer = trtl.Turtle()
 score_writer.penup()
 score_writer.goto(-350, 250)
 score_writer.write(score, font=font_setup)
-
-
-# triangle_painter = trtl.Turtle()
-# triangle_painter.shape("triangle")
-# triangle_painter.shapesize(triangle_size)
-# triangle_painter.fillcolor(triangle_color)
-
-# square_painter = trtl.Turtle()
-# square_painter.shape("square")
-# square_painter.shapesize(square_size)
-# square_painter.fillcolor(square_color)
-
-# classic_painter = trtl.Turtle()
-# classic_painter.shape("classic")
-# classic_painter.shapesize(classic_size)
-# classic_painter.fillcolor(classic_color)
 
 #-----game functions--------
 
@@ -61,10 +41,26 @@ def update_score():
     score_writer.clear()
     score_writer.write(score, font=font_setup)
 
+def countdown():
+  global timer, timer_up
+  counter.clear()
+  if timer <= 0:
+    counter.write("Time's Up", font=font_setup)
+    timer_up = True
+  else:
+    counter.write("Timer: " + str(timer), font=font_setup)
+    timer -= 1
+    counter.getscreen().ontimer(countdown, counter_interval) 
+
 def spot_clicked(x, y):
-    print("spot clicked")
-    change_position()
-    update_score()
+
+    global timer_up
+    if not timer_up:
+        print("spot clicked")
+        change_position()
+        update_score()
+    else:
+        spot_painter.hideturtle()
 
 def change_position():
     spot_painter.penup()
@@ -77,4 +73,5 @@ def change_position():
 
 spot_painter.onclick(spot_clicked)
 wn = trtl.Screen()
+wn.ontimer(countdown, counter_interval) 
 wn.mainloop()
