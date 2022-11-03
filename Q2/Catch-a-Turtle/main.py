@@ -53,7 +53,6 @@ def countdown():
     counter.getscreen().ontimer(countdown, counter_interval) 
 
 def spot_clicked(x, y):
-
     global timer_up
     if not timer_up:
         print("spot clicked")
@@ -73,5 +72,6 @@ def change_position():
 
 spot_painter.onclick(spot_clicked)
 wn = trtl.Screen()
+wn.bgcolor("sky blue")
 wn.ontimer(countdown, counter_interval) 
 wn.mainloop()
