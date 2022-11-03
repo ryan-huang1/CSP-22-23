@@ -6,6 +6,7 @@ import random as rand
 #-----game configuration----
 
 score = 0
+font_setup = ("Arial", 20, "normal")
 
 spot_color = "pink"
 spot_size = 2
@@ -30,6 +31,12 @@ spot_painter.shape("circle")
 spot_painter.shapesize(spot_size)
 spot_painter.fillcolor(spot_color)
 
+score_writer = trtl.Turtle()
+score_writer.penup()
+score_writer.goto(-350, 250)
+score_writer.write(score, font=font_setup)
+
+
 # triangle_painter = trtl.Turtle()
 # triangle_painter.shape("triangle")
 # triangle_painter.shapesize(triangle_size)
@@ -51,6 +58,8 @@ def update_score():
     global score
     score += 1
     print(score)
+    score_writer.clear()
+    score_writer.write(score, font=font_setup)
 
 def spot_clicked(x, y):
     print("spot clicked")
