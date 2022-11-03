@@ -5,21 +5,23 @@ import random as rand
 
 #-----game configuration----
 
+score = 0
+
 spot_color = "pink"
 spot_size = 2
 spot_shape= "circle"
 
-triangle_color = "blue"
-triangle_size = 2
-triangle_shape = "triangle"
+# triangle_color = "blue"
+# triangle_size = 2
+# triangle_shape = "triangle"
 
-square_color = "green"
-square_size = 3
-square_shape = "square"
+# square_color = "green"
+# square_size = 3
+# square_shape = "square"
 
-classic_color = "red"
-classic_size = 1
-classic_shape = "classic"
+# classic_color = "red"
+# classic_size = 1
+# classic_shape = "classic"
 
 #-----initialize turtle-----
 
@@ -45,9 +47,15 @@ spot_painter.fillcolor(spot_color)
 
 #-----game functions--------
 
+def update_score():
+    global score
+    score += 1
+    print(score)
+
 def spot_clicked(x, y):
     print("spot clicked")
     change_position()
+    update_score()
 
 def change_position():
     spot_painter.penup()
