@@ -1,5 +1,5 @@
 Pat,50
 Jack,42
-Jill,38
-John,27
-Paul,19
+nice,40
+lmao,40
+helloooo,39
