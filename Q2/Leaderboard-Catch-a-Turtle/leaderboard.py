@@ -18,13 +18,21 @@ def get_names(file_name):
     index = 0
 
     # TODO 1: use a while loop to read the leader name from the line (format is "leader_name,leader_score")
+    while (line[index] != ","):
+      leader_name = leader_name + line[index] 
+      index = index + 1
+      print(leader_name)
 
     # TODO 2: add the player name to the names list
+    names.append(leader_name)
 
   leaderboard_file.close()
+  print(names)
 
   #  TODO 6: return the names list in place of the empty list
   return []
+
+get_names("Q2/Leaderboard-Catch-a-Turtle/a122_leaderboard.txt")
 
   
 # return scores from the leaderboard file
@@ -37,6 +45,7 @@ def get_scores(file_name):
     index = 0
 
     # TODO 3: use a while loop to index beyond the comma, skipping the player's name
+    #regex exctract all charaters behind the coma
 
     # TODO 4: use a while loop to get the score
 
