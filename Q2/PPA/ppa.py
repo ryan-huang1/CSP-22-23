@@ -12,3 +12,13 @@ def sum_1_100():
     for i in range(1, 101):
         sum = sum + i
     return sum
+
+def prnt_ints(i, j):
+    for k in range(i, j + 1):
+        print(k)
+
+def sum_ints(i, j):
+    sum = 0
+    for k in range(i, j + 1):
+        sum = sum + k
+    return sum
