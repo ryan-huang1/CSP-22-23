@@ -22,3 +22,17 @@ def sum_ints(i, j):
     for k in range(i, j + 1):
         sum = sum + k
     return sum
+
+def sum_ints_m(i, j):
+    sum = 0
+    for k in range(i, j + 1):
+        if k % 3 == 0:
+            sum = sum + k
+    return sum
+
+def sum_ints_m37(i, j):
+    sum = 0 
+    for k in range(i, j + 1):
+        if k % 3 == 0 or k%7 == 0:
+            sum = sum + k
+    return sum
