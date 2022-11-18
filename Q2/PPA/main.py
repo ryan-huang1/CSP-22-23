@@ -27,3 +27,16 @@ print('\nsum_ints(i,j)')
 print('\t',ppa.sum_ints(1,5))
 print('\t',ppa.sum_ints(-4,2))
 print('\t',ppa.sum_ints(0,6))
+
+# 6
+print('\nsum_ints_m(i,j)')
+print('\t',ppa.sum_ints_m(1,10))
+print('\t',ppa.sum_ints_m(-4,9))
+print('\t',ppa.sum_ints_m(0,13))
+
+
+# 7
+print('\nsum_ints_m37(i,j)')
+print('\t',ppa.sum_ints_m37(1,10))
+print('\t',ppa.sum_ints_m37(-4,9))
+print('\t',ppa.sum_ints_m37(0,13))
