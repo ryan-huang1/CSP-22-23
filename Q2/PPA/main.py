@@ -34,10 +34,29 @@ print('\t',ppa.sum_ints_m(1,10))
 print('\t',ppa.sum_ints_m(-4,9))
 print('\t',ppa.sum_ints_m(0,13))
 
-
 # 7
 print('\nsum_ints_m37(i,j)')
 print('\t',ppa.sum_ints_m37(1,10))
 print('\t',ppa.sum_ints_m37(-4,9))
 print('\t',ppa.sum_ints_m37(0,13))
 
+# 8
+print('\nodd_ints_100b()')
+print('\t')
+ppa.odd_ints_100b()
+
+# 9
+print('\nodd_ints_b(i,j)')
+print('\t')
+ppa.odd_ints_b(100,42)
+ppa.odd_ints_b(100,41)
+ppa.odd_ints_b(10,-3)
+ppa.odd_ints_b(-3,-10)
+
+# 10
+print('\neven_sum_b(i,j)')
+print('\t')
+print('\t',ppa.even_sum_b(100,42))
+print('\t',ppa.even_sum_b(100,41))
+print('\t',ppa.even_sum_b(10,-3))
+print('\t',ppa.even_sum_b(-3,-10))
