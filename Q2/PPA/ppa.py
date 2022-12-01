@@ -36,3 +36,58 @@ def sum_ints_m37(i, j):
         if k % 3 == 0 or k%7 == 0:
             sum = sum + k
     return sum
+
+#prints in order the odd numbers from 100 back to 42
+
+
+
+def odd_ints_100b():
+    k = 100
+    while True:
+        if k % 2 != 0:
+            print(k)
+        if k == 0:
+            break
+        k -= 1
+        
+    j = 0
+    while True:
+        if j % 2 != 0:
+            print(j)
+        if j == 42:
+            break
+        j += 1
+    
+def odd_ints_b(a,o):
+    k = a
+    while True:
+        if k % 2 != 0:
+            print(k)
+        if k == 0:
+            break
+        k -= 1
+        
+    j = 0
+    while True:
+        if j % 2 != 0:
+            print(j)
+        if j == o:
+            break
+        j += 1
+
+def even_ints_b(a,o):
+    k = a
+    while True:
+        if k % 2 != 0:
+            print(k)
+        if k == 0:
+            break
+        k -= 1
+        
+    j = 0
+    while True:
+        if j % 2 != 0:
+            print(j)
+        if j == o:
+            break
+        j += 1
