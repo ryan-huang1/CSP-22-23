@@ -151,7 +151,6 @@ def draw_leaderboard(high_scorer, leader_names, leader_scores, turtle_object, pl
   elif (player_score >= gold_score):
     turtle_object.write("You earned a gold medal!", font=font_setup)
 
-
   if (player_score >= gold_score):
     turtle_object.write("You earned a gold medal!", font=font_setup)
   elif (player_score >= silver_score):
