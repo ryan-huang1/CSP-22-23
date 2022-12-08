@@ -91,3 +91,31 @@ def even_ints_b(a,o):
         if j == o:
             break
         j += 1
+
+def factorial(input):
+    if input == 0:
+        return 1
+    else:
+        return input * factorial(input - 1)
+
+# make a method which uses the taylor series to approximate e^x using n terms
+def e_to_x(e, x):
+    sum = 0
+    for i in range(0, e + 1):
+        sum = sum + (x ** i) / factorial(i)
+    return sum
+
+def factor(input):
+    for i in range(1, input + 1):
+        print(i)
+        if input % i == 0:
+            print(i)
+
+#make a method given a positve integer number n, determine and print out the frequency(number of times it appears) of a diget in d, in all possible values from 0 up to and including n
+def dig_freq(n, d):
+    count = 0
+    for i in range(0, d + 1):
+        for j in str(i):
+            if j == str(n):
+                count = count + 1
+    return count
