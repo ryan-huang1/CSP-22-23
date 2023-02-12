@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #reading the csv file
-df = pd.read_csv('/Users/ryanhuang/Documents/GitHub/CSP-22-23/Q-13/heartbeats/ecg_csv.csv')
+df = pd.read_csv('Q3/Heartbeats/ecg_csv.csv')
 
 #converting the csv file into a dataframe
 df = pd.DataFrame(df)
