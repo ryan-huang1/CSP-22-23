@@ -20,3 +20,33 @@ def one_word(password):
     if (w == password):
       return True, guesses
   return False, guesses
+
+# #analyze a two-word password
+# def two_words(password):
+#     words = get_dictionary()
+#     guesses = 0
+#     # get each word from the dictionary file
+#     for w1 in words:
+#         for w2 in words:
+#             guesses += 1
+#             if (w1+w2 == password):
+#                 return True, guesses
+#         return False, guesses
+    
+#analyze a two-word password
+def two_words(password):
+    words = get_dictionary()
+    guesses = 0
+   
+    for w in words:
+        subword = password[len(w):]
+        guess = w + subword
+        guesses += 1
+        if (w == password):
+            return True, guesses
+    return False, guesses
+      
+   
+    # get each word from the dictionary file
+
+two_words("hello")
