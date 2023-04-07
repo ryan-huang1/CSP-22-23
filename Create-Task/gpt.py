@@ -1,7 +1,8 @@
+import os
 import openai
 import message_helper
 
-openai.api_key = "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"
+openai.api_key = os.environ.get('openai_key')
 
 system_prompts = {
     "sms": "you are a personal assistant to ryan, who is tasked to respond to his messages from his friends from a first person point of view, as if you are your ryan. make sure to imitate the word choice and diction of the message you are asked to respond to, informal texting",
