@@ -19,10 +19,6 @@
         {
             "role": "user",
             "content": "3am?"
-        },
-        {
-            "role": "assistant",
-            "content": "Wait, did you mean 3 in the afternoon or 3 in the morning? If it's afternoon, then it works for me! But if it's morning, I might have to pass this time."
         }
     ],
     "9193575908": [
